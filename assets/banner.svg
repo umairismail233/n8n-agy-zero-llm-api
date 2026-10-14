@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bolt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#DBEAFE" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#DBEAFE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="#FAFAF8"/>
+  <rect width="1280" height="640" fill="url(#glow)"/>
+
+  <!-- faint node line-art, bottom-left -->
+  <g stroke="#E5E7EB" stroke-width="2" opacity="0.9" fill="none">
+    <circle cx="120" cy="500" r="9" fill="#F3F4F6"/>
+    <circle cx="210" cy="560" r="9" fill="#F3F4F6"/>
+    <circle cx="300" cy="510" r="9" fill="#F3F4F6"/>
+    <path d="M120 500 L210 560 L300 510"/>
+  </g>
+
+  <!-- lightning bolt, right of the title -->
+  <polygon points="980,110 855,340 940,340 875,530 1065,275 970,275" fill="url(#bolt)"/>
+
+  <!-- faint nodes peeking behind the bolt -->
+  <g stroke="#C7D2FE" stroke-width="2" opacity="0.8" fill="#EEF2FF">
+    <circle cx="1130" cy="180" r="11"/>
+    <circle cx="1195" cy="300" r="11"/>
+    <circle cx="1120" cy="430" r="11"/>
+    <path d="M1130 180 L1195 300 L1120 430" stroke="#C7D2FE" fill="none"/>
+  </g>
+
+  <!-- title block -->
+  <text x="80" y="250" font-size="64" font-weight="800" fill="#111827" letter-spacing="-1">n8n-agy-zero-llm-api</text>
+  <text x="82" y="312" font-size="29" font-weight="400" fill="#4B5563">$0 API bills — your Gemini Pro session as a</text>
+  <text x="82" y="354" font-size="29" font-weight="400" fill="#4B5563">local OpenAI-compatible API for n8n</text>
+
+  <!-- pills -->
+  <g font-size="20" font-weight="600">
+    <rect x="80" y="400" width="150" height="44" rx="22" fill="#EFF6FF"/>
+    <text x="155" y="429" text-anchor="middle" fill="#1D4ED8">OpenAI API</text>
+    <rect x="242" y="400" width="120" height="44" rx="22" fill="#F5F3FF"/>
+    <text x="302" y="429" text-anchor="middle" fill="#6D28D9">n8n ready</text>
+    <rect x="374" y="400" width="110" height="44" rx="22" fill="#ECFDF5"/>
+    <text x="429" y="429" text-anchor="middle" fill="#047857">MIT</text>
+  </g>
+</svg>
