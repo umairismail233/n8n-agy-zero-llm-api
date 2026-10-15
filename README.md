@@ -60,12 +60,9 @@ If you already pay for **Google Gemini Pro / Advanced** (or run the Antigravity 
 
 ```mermaid
 flowchart LR
-    A["n8n AI Agent Node<br/>(localhost:5678)"] -->|"OpenAI-style request"| B["Bridge (FastAPI)<br/>(127.0.0.1:5000/v1)"]
-    B -->|"Spawns CLI"| C["agy CLI<br/>(--print prompt)"]
-    C -->|"Gemini Pro Session"| D["Google Gemini"]
-    D -->|"LLM Response"| C
-    C -->|"stdout"| B
-    B -->|"SSE / JSON Stream"| A
+    A["🤖 n8n AI Agent<br/>(localhost:5678)"] <-->|"1. OpenAI Request &<br/>SSE Token Stream"| B["⚡ FastAPI Bridge<br/>(Port 5000)"]
+    B <-->|"2. Spawns Process &<br/>Pipes stdout"| C["💻 agy Engine<br/>(Local Session)"]
+    C <-->|"3. Zero-Cost Query &<br/>Model Response"| D["🧠 Google Gemini Pro<br/>(Account Session)"]
 ```
 
 1. Point n8n's OpenAI credential at `http://127.0.0.1:5000/v1` with model `agy-local-engine`.
