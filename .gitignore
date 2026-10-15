@@ -1,8 +1,11 @@
 # Secrets & credentials
 .env
+.env.*
+!.env.example
 *.pem
 *.key
 credentials.json
+SOUL.md
 
 # Python
 __pycache__/
@@ -24,8 +27,11 @@ data/
 *.sqlite-shm
 *.sqlite-wal
 
-# OS / editor
+# OS / editor / agent
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
+.agents/
+.gemini/
+scratch/

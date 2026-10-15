@@ -13,8 +13,10 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB.svg)]()
 [![n8n](https://img.shields.io/badge/works_with-n8n-EA4B71.svg)]()
 [![API keys](https://img.shields.io/badge/paid_API_keys-none_needed-success.svg)]()
+[![Stars](https://img.shields.io/github/stars/umairismail233/n8n-agy-zero-llm-api?style=social)](https://github.com/umairismail233/n8n-agy-zero-llm-api)
 
 [Quickstart](#-quickstart-3-double-clicks) •
+[Why This Bridge](#-cost--architecture-comparison) •
 [How it works](#-how-it-works) •
 [API reference](#-api-reference) •
 [FAQ](#-faq) •
@@ -29,6 +31,18 @@
 n8n's AI Agent nodes, Chat Hub, and assistants all expect an **OpenAI-style API** — which normally means handing OpenAI or Anthropic your credit card and paying per token, forever.
 
 If you already pay for **Google Gemini Pro / Advanced** (or run the Antigravity IDE), you're *already* paying for a frontier model. This bridge lets n8n spend that subscription instead of a second API bill.
+
+## 📊 Cost & Architecture Comparison
+
+| Feature | OpenAI / Anthropic Direct | Local Ollama | ⚡ n8n-agy-zero-llm-api |
+|---|---|---|---|
+| **Monthly API Bill** | 💸 $20 - $100+/mo per-token fees | $0.00 | **$0.00 extra** (Uses existing Gemini Pro plan) |
+| **Model Quality** | Frontier (GPT-4o, Sonnet) | Limited by local hardware | **Frontier Intelligence (Gemini 1.5 Pro)** |
+| **Hardware Required** | Low (Cloud) | Heavy GPU (16GB+ VRAM required) | **Ultra-lightweight (Runs on standard PC / 4GB RAM)** |
+| **Credit Card on File** | Required | Not required | **None required** |
+| **n8n Drop-In Ready** | Yes | Needs custom model config | **100% Native Drop-in** (`/v1/chat/completions`) |
+| **Streaming Support** | Yes | Varies | **Full SSE Streaming (`stream: true`)** |
+| **Setup Experience** | Manual API keys | Complex CLI setup | **1-Click Self-Healing Windows Launchers** |
 
 ## ✨ What this gives you
 
