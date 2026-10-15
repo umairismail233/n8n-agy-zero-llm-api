@@ -1,0 +1,42 @@
+name: 🐛 Bug Report
+description: Create a report to help us improve n8n-agy-zero-llm-api
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Please ensure you do **NOT** include any personal tokens or confidential credentials in your logs or screenshots.
+  - type: input
+    id: environment
+    attributes:
+      label: Operating System & Versions
+      description: What Windows/OS version, Python version, Node.js version, and n8n version are you running?
+      placeholder: e.g. Windows 11 64-bit, Python 3.11, Node.js 20 LTS, n8n 1.45.0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: When I run 1-start-bridge.bat, the portal fails to open or returns...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the behavior.
+      value: |
+        1. Run '...'
+        2. Click on '....'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Terminal / Bridge Logs
+      description: Paste any error traceback or console output here (sanitize any tokens).
+      render: shell
